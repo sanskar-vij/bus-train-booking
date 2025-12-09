@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Bus & Train Booking{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+ <nav class="nav">
+  <div class="nav-left">
+    <a href="{{ url_for('index') }}">Home</a>
+  </div>
+  <div class="nav-center">
+    <span class="brand">TravelMate</span>
+  </div>
+  <div class="nav-right">
+    <a class="btn btn-outline-primary" href="{{ url_for('view_bookings') }}">View Bookings</a>
+  </div>
+</nav>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for category, message in messages %}
+            <li class="flash {{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

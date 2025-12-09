@@ -1,0 +1,177 @@
+/* =======================================
+   Global Styles
+======================================= */
+body {
+    font-family: 'Algerian', sans-serif;
+    background: linear-gradient(120deg, #111827, #1f2937);
+    margin: 0;
+    color: #f3f4f6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Algerian', sans-serif;
+    font-weight: bold;
+    color: #facc15; /* golden headings */
+    margin-bottom: 20px;
+}
+
+/* =======================================
+   Navbar
+======================================= */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f2937;
+    padding: 12px 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.nav a {
+    color: #f3f4f6;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.nav a:hover {
+    background: #d1d5db33; /* light gray hover */
+}
+
+.nav-center .brand {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #facc15;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* =======================================
+   Container / Form
+======================================= */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #374151; /* dark gray form */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #f3f4f6;
+    font-weight: 500;
+}
+
+input, select {
+    background: #1f2937;
+    color: #f3f4f6;
+    border: 1px solid #6b7280;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #facc15;
+    box-shadow: 0 0 5px #facc15;
+}
+
+/* =======================================
+   Button
+======================================= */
+button {
+    background: #f59e0b; /* amber */
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #d97706; /* darker amber */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* =======================================
+   Table
+======================================= */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #374151;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    color: #f3f4f6;
+}
+
+.table th, .table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #6b7280;
+    text-align: left;
+}
+
+.table th {
+    background: #1f2937;
+}
+
+/* =======================================
+   Flash Messages
+======================================= */
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.flash.success {
+    background: #065f46;
+    color: #d1fae5;
+}
+
+.flash.danger {
+    background: #7f1d1d;
+    color: #fee2e2;
+}
+
+/* =======================================
+   Misc
+======================================= */
+a.btn-outline-primary {
+    background: none;
+    border: 1px solid #f59e0b;
+    color: #f59e0b;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+a.btn-outline-primary:hover {
+    background: #f59e0b;
+    color: #fff;
+}
+
+input[type="number"] {
+    width: 80px;
+}
+
+input[type="date"] {
+    width: 160px;
+}

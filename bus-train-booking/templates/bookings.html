@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Bookings - Bus & Train{% endblock %}
+{% block content %}
+<h1>All bookings</h1>
+{% if bookings %}
+  <table class="table">
+    <thead><tr><th>ID</th><th>Name</th><th>Transport</th><th>Date</th><th>Seats</th><th>Created</th></tr></thead>
+    <tbody>
+      {% for b in bookings %}
+        <tr>
+          <td>{{ b.id }}</td>
+          <td>{{ b.name }}</td>
+          <td>{{ b.transport }}</td>
+          <td>{{ b.date }}</td>
+          <td>{{ b.seats }}</td>
+          <td>{{ b.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No bookings yet — make one from the <a href="{{ url_for('index') }}">home page</a>.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Book - Bus & Train{% endblock %}
+{% block content %}
+
+<h1>Book a seat</h1>
+<form action="{{ url_for('api_book') }}" method="post">
+  <label>Name:
+    <input type="text" name="name" required>
+  </label>
+  <label>Transport:
+    <select name="transport" required>
+      <option value="bus">Bus</option>
+      <option value="train">Train</option>
+    </select>
+  </label>
+  <label>Date:
+    <input type="date" name="date" required>
+  </label>
+  <label>Seats:
+    <input type="number" name="seats" value="1" min="1">
+  </label>
+  <button type="submit">Book</button>
+</form>
+{% endblock %}
